@@ -2,6 +2,7 @@ package com.masai.models;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Scanner;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -31,4 +32,6 @@ public class Post {
 	private User user;
 	@OneToMany
 	private Set<Comment> comments;
+	
+	
 }
