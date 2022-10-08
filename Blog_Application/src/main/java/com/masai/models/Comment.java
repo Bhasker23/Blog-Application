@@ -3,6 +3,7 @@ package com.masai.models;
 import java.time.LocalDate;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -24,8 +25,8 @@ public class Comment {
 	private Integer id;
 	private String content;
 	private LocalDate date;
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	private User user;
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	private Post post;
 }

@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -28,9 +29,9 @@ public class Post {
 	private String title;
 	private String content;
 	private LocalDate date;
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	private User user;
-	@OneToMany
+	@OneToMany(cascade = CascadeType.ALL)
 	private Set<Comment> comments;
 	
 	
